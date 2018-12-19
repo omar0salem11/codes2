@@ -197,7 +197,7 @@ client.on('messageReactionRemove', (reaction, user) => {
    .setColor('RANDOM')
   .setTimestamp()
 
-  .addField("⦁`All types of codes in Toxic Codes Server 💬`⦁",' ‎ ')
+  .addField("⦁`All types of codes in  Codes Server 💬`⦁",' ‎ ')
   .addField("❧  **#help-js-source    ➺      ⦁ قسم السورس الأساسي** ⦁",' ‎ ')
    .addField("❧  **#help-js-admin     ➺      ⦁ قسم الأكواد الإدارية** ⦁",' ‎ ')
      .addField("❧  **#help-js-general   ➺      ⦁ قسم الأكواد العامة*** ⦁",' ‎ ')
@@ -224,7 +224,7 @@ client.on('messageReactionRemove', (reaction, user) => {
    .setColor('RANDOM')
   .setTimestamp()
 
-  .addField("⦁`All types of codes in Toxic Codes Server 💬`⦁",' ‎ ')
+  .addField("⦁`All types of codes in  Codes Server 💬`⦁",' ‎ ')
   .addField("**#help-js-source-1  ➺      ⦁ السورس الأساسي**⦁",' ‎ ')
    .addField("**#help-js-source-2  ➺      ⦁ السورس الأساسي مع الستريمنق ومعلومات البوت** ⦁",' ‎ ')
      .addField("**#help-js-source-3  ➺      ⦁ السورس الأساسي مع الستريمنق ومعلومات البوت** ⦁",' ‎ ')
@@ -746,7 +746,7 @@ client.on('messageReactionRemove', (reaction, user) => {
    .setColor('RANDOM')
   .setTimestamp()
 
-  .addField("⦁`All types of codes in Toxic Codes Server 💬`⦁",' ‎ ')
+  .addField("⦁`All types of codes in  Codes Server 💬`⦁",' ‎ ')
   .addField("**#help-js-welcome-1  ➺      ⦁ كود ترحيب مع ذكر رقم العضو **⦁",' ‎ ')
    .addField("**#help-js-welcome-2  ➺      ⦁ كود الترحيب مع صورة ** ⦁",' ‎ ')
      .addField("**#help-js-welcome-3  ➺      ⦁ كود مغادرة العضو ** ⦁",' ‎ ')
@@ -856,7 +856,7 @@ client.on('messageReactionRemove', (reaction, user) => {
    .setColor('RANDOM')
   .setTimestamp()
 
-  .addField("⦁`All types of codes in Toxic Codes Server 💬`⦁",' ‎ ')
+  .addField("⦁`All types of codes in  Codes Server 💬`⦁",' ‎ ')
   .addField("**#help-js-help-1  ➺      ⦁ كود هلب مع امبد يرسل بنفس الشات **⦁",' ‎ ')
    .addField("**#help-js-help-2  ➺      ⦁ كود هلب مزخرف بدون امبد ويرسل عالخاص ** ⦁",' ‎ ')
 		   
@@ -1260,8 +1260,8 @@ client.on("message", message => {
 		   	   .addField("❖ #inv ➾ رابط السيرفر ⦁",' ‎ ')
 .addField("❖ #own ➾ مسؤول البوت⦁",' ‎ ')
 .addField("❖ #top-inv ➾ اكثر شخص بالدعوات ⦁",' ‎ ')
-.addField("❖ ❖ #ping ➾ عرض سرعه اتصال البوت ⦁",' ‎ ')
-.addField("❖ ❖ #server ➾ معلومات عن السيرفر ⦁",' ‎ ')
+.addField("❖ #ping ➾ عرض سرعه اتصال البوت ⦁",' ‎ ')
+.addField("❖ #server ➾ معلومات عن السيرفر ⦁",' ‎ ')
 
  .setFooter('Codes')
 
@@ -1698,7 +1698,7 @@ client.on("message", message => {
   let mention = message.mentions.members.first();
   let role = message.content.split(" ").slice(2).join(" ");
   let mySupport = message.guild.roles.find('name',role);
-  if(message.content.startsWith("*قبول")) {
+  if(message.content.startsWith("#قبول")) {
     let acRoom = message.guild.channels.find('name', 'القبول-الرفض');
     if(!acRoom) return message.reply("!!setac من فضلك انشاء روم **القبول-ال��فض** او اكتب الامر");
     if(acRoom) {///n3k4a is one  
@@ -1716,7 +1716,7 @@ client.on("message", message => {
 });
 client.on('message',async message => {
   let mention = message.mentions.members.first();///n3k4a is one  
-  if(message.content.startsWith("*رفض")) {
+  if(message.content.startsWith("#رفض")) {
   if(!message.channel.guild) return;///n3k4a is one  
   let acRoom = message.guild.channels.find('name', 'القبول-الرفض');
   if(!acRoom) return message.reply("!!setac من فضلك انشاء روم **القبول-الرفض** او اكتب الامر");
@@ -2418,5 +2418,31 @@ ${thisMessage}\`\`\`
     })}});
 
 
+
+const adminprefix = "#v";
+const devs = ['506567510338961430'];
+client.on('message', message => {
+  var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+   
+if (message.content.startsWith(adminprefix + 'setgame')) {
+  client.user.setGame(argresult);
+    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+} else
+  if (message.content.startsWith(adminprefix + 'setname')) {
+client.user.setUsername(argresult).then
+    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
+} else
+  if (message.content.startsWith(adminprefix + 'setavatar')) {
+client.user.setAvatar(argresult);
+  message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+      } else    
+if (message.content.startsWith(adminprefix + 'setT')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/idk");
+    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
+}
+ 
+});
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
